@@ -14,12 +14,14 @@ function cadastrar() {
         const textoBtnAlterar = document.createTextNode("Alterar");
         botaoAlterar.setAttribute('class', 'icon');
         botaoAlterar.setAttribute('src', 'assets/icon/edit.png');
+        botaoAlterar.setAttribute('onclick', 'editarTarefa()');
         botaoAlterar.appendChild(textoBtnAlterar);
 
         const botaoExcluir = document.createElement("img");
         const textoBtnExcluir = document.createTextNode("Excluir");
         botaoExcluir.setAttribute('class', 'icon');
         botaoExcluir.setAttribute('src', 'assets/icon/delete.png');
+        botaoExcluir.setAttribute('onclick', 'deletarTarefa()');
         botaoExcluir.appendChild(textoBtnExcluir);
 
         const divBotoes = document.createElement("div");
@@ -54,6 +56,14 @@ function cadastrar() {
         window.alert('Não é possível inserir tarefa em branco');
     }
     
+}
+
+function editarTarefa() {
+    window.alert("Esse botão ainda não faz nada");
+}
+
+function deletarTarefa() {
+    window.alert("Esse botão ainda não faz nada");
 }
 
 // function cadastrar2() {
