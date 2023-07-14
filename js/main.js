@@ -37,7 +37,6 @@ function cadastrar() {
         console.log("criando paragrafo");
         // criando paragrafo
         const paragrafoTarefa = document.createElement("p");
-        
         paragrafoTarefa.appendChild(tarefa);
         // fim criando paragrafo
 
@@ -57,10 +56,10 @@ function cadastrar() {
     
 }
 
-function cadastrar2() {
-    const para = document.createElement("p");
-    const node = document.createTextNode("This is a new paragraph.");
-    para.appendChild(node);
-    const element = document.querySelector("div.lista");
-    element.appendChild(para);
-}
+// function cadastrar2() {
+//     const para = document.createElement("p");
+//     const node = document.createTextNode("This is a new paragraph.");
+//     para.appendChild(node);
+//     const element = document.querySelector("div.lista");
+//     element.appendChild(para);
+// }
