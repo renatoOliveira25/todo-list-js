@@ -1,47 +1,84 @@
-.to-do {
-    border: 1px solid black;
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: aliceblue;
+}
+
+h1 {
+    text-align: center;
+}
+
+.to-do-list {
+    padding: 1.5% 2%;
 }
 
 .cadastro {
+    width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .cadastro > input {
-    width: 85%;
+    width: 100%;
     height: 25px;
-    margin-bottom: 1.5%;
+    margin: 1.5%;
+    padding: 1% 2%;
+    background-color: #fcfcfc;
 }
 
 .cadastro > button {
-    height: 31px;
+    margin: auto 1.5%;
+    border-radius: 10%;
+    border: none;
+    padding: 1.25% 2%;
+    background-color: cadetblue;
+    color: #fcfcfc;
+    font-size: 1.25em;
 }
 
-.lista {
-    width: 100%;
+.listaTarefas {
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: black;
-    margin: 0.5% 0;
+    margin: 0 auto;
 }
 
 .tarefa {
     display: flex;
     justify-content: center;
-    border: 0.5px solid white;
+    border: 0.5px solid #eee;
+    border-radius: 10px;
+    background-color: cadetblue;
+    margin-bottom: 0.75%;
+    padding: 1.5% 0;
+}
+
+.tarefa > #statusTarefa {
+    
 }
 
 .tarefa > p {
-    width: 90%;
-    color: aliceblue;
+    width: 75%;
+    color: #fcfcfc;
+    font-size: 1.25em;
+    padding-left: 2%;
+    word-break: break-all;
 }
 
 .botoes {
     display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: auto 0;
+}
+
+.icon {
+    width: 2em;
+    height: 2em;
+    margin: 0 15%;
+    filter: invert(1);
 }

@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TO-DO List</title>
+    <title>TO-DO LIST</title>
     <link rel="stylesheet" href="css/lista.css">
     <script src="js/main.js"></script>
 </head>
 <body>
-    <div class="to-do">
+    <h1>TO-DO LIST</h1>
+    <div class="to-do-list">
         <div class="cadastro">
             <input type="text" name="tarefa" id="tarefa">
             <button onclick="cadastrar()">Cadastrar</button>
         </div>
-        <div class="lista">
+        <div class="listaTarefas">
             <div class="tarefa">
+                <input type="checkbox" name="statusTarefa" id="statusTarefa">
                 <p>Aprender JS</p>
                 <div class="botoes">
-                    <button>Alterar</button>
-                    <button>Excluir</button>
+                    <img class="icon" src="assets/icon/edit.png" alt="edit">
+                    <img class="icon" src="assets/icon/delete.png" alt="delete">
                 </div>
             </div>
             <div class="tarefa">
+                <input type="checkbox" name="statusTarefa" id="statusTarefa">
                 <p>Formatar o PC</p>
                 <div class="botoes">
-                    <button>Alterar</button>
-                    <button>Excluir</button>
+                    <img class="icon" src="assets/icon/edit.png" alt="edit">
+                    <img class="icon" src="assets/icon/delete.png" alt="delete">
                 </div>
             </div>
             <div class="tarefa">
+                <input type="checkbox" name="statusTarefa" id="statusTarefa">
                 <p>Rir do Curintia</p>
                 <div class="botoes">
-                    <button>Alterar</button>
-                    <button>Excluir</button>
+                    <img class="icon" src="assets/icon/edit.png" alt="edit">
+                    <img class="icon" src="assets/icon/delete.png" alt="delete">
                 </div>
             </div>
         </div>

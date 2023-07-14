@@ -1,45 +1,60 @@
-function editar() {
-
-}
-
 function cadastrar() {
-    let textoTarefa = document.getElementById("tarefa").value;
-    
-    console.log("criando botoes");
-    // criando botoes
-    const botaoAlterar = document.createElement("button");
-    const textoBtnAlterar = document.createTextNode("Alterar");
-    botaoAlterar.appendChild(textoBtnAlterar);
 
-    const botaoExcluir = document.createElement("button");
-    const textoBtnExcluir = document.createTextNode("Excluir");
-    botaoExcluir.appendChild(textoBtnExcluir);
-
-    const divBotoes = document.createElement("div");
-    divBotoes.classList.add("botoes");
-    divBotoes.appendChild(botaoAlterar);
-    divBotoes.appendChild(botaoExcluir);
-    // fim criando botoes
-
-    console.log("criando paragrafo");
-    // criando paragrafo
-    const paragrafoTarefa = document.createElement("p");
-    const tarefa = document.createTextNode(textoTarefa);
-    paragrafoTarefa.appendChild(tarefa);
-    // fim criando paragrafo
-
-    // const divTarefa = document.createElement("div");
-    // divTarefa.appendChild(paragrafoTarefa);
-    // divTarefa.appendChild(divBotoes);
-
-    console.log("adicionando a pagina");
+    const textoTarefa = document.getElementById("tarefa").value;
     const divTarefa = document.createElement("div");
-    divTarefa.classList.add('tarefa');
-    divTarefa.appendChild(paragrafoTarefa);
-    divTarefa.appendChild(divBotoes);
+    const tarefa = document.createTextNode(textoTarefa);
+    const divLista = document.querySelector("div.listaTarefas");
 
-    const divLista = document.querySelector("div.lista");
-    divLista.appendChild(divTarefa);
+    if(textoTarefa != '') {
+        console.log('cadastrando');
+        
+        console.log("criando botoes");
+        // criando botoes
+        const botaoAlterar = document.createElement("img");
+        const textoBtnAlterar = document.createTextNode("Alterar");
+        botaoAlterar.setAttribute('class', 'icon');
+        botaoAlterar.setAttribute('src', 'assets/icon/edit.png');
+        botaoAlterar.appendChild(textoBtnAlterar);
+
+        const botaoExcluir = document.createElement("img");
+        const textoBtnExcluir = document.createTextNode("Excluir");
+        botaoExcluir.setAttribute('class', 'icon');
+        botaoExcluir.setAttribute('src', 'assets/icon/delete.png');
+        botaoExcluir.appendChild(textoBtnExcluir);
+
+        const divBotoes = document.createElement("div");
+        divBotoes.classList.add("botoes");
+        divBotoes.appendChild(botaoAlterar);
+        divBotoes.appendChild(botaoExcluir);
+        // fim criando botoes
+
+        console.log("criando checkbox");
+        const checkBox = document.createElement("input");
+        checkBox.setAttribute('type', 'checkbox');
+        checkBox.setAttribute('name', 'statusTarefa');
+        checkBox.setAttribute('id', 'statusTarefa');
+
+        console.log("criando paragrafo");
+        // criando paragrafo
+        const paragrafoTarefa = document.createElement("p");
+        
+        paragrafoTarefa.appendChild(tarefa);
+        // fim criando paragrafo
+
+        console.log("adicionando a pagina");
+        
+        divTarefa.classList.add('tarefa');
+        divTarefa.appendChild(checkBox);
+        divTarefa.appendChild(paragrafoTarefa);
+        divTarefa.appendChild(divBotoes);
+
+        divLista.appendChild(divTarefa);
+
+        document.getElementById("tarefa").value = '';
+    } else {
+        window.alert('Não é possível inserir tarefa em branco');
+    }
+    
 }
 
 function cadastrar2() {
